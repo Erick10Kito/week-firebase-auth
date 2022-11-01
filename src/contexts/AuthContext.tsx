@@ -29,7 +29,9 @@ const formatUserData = ({
   if (!displayName || !photoURL) {
     throw new Error("O usuario não tem Nome ou foto");
   }
-
+  /*if (email != "erickcamposbem69@gmail.com") {
+    alert("Saiiiii");
+  }*/
   return {
     id: uid,
     avatar: photoURL,
