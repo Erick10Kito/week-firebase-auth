@@ -6,13 +6,9 @@ function AfterLogin() {
   const { user } = useContext(AuthContext);
   return (
     <form className="flex flex-col items-center">
-      <h3 className="text-3xl text-white">
-        Seja muito bem-vindo {user.name} do email {user.mail}
-      </h3>
-      <p className="text-xl text-white">
-        Já aviso que temos um novo desafio para você!
-      </p>
-      <p className="text-xl text-white">Tu já está logado. QUERO DESLOGAR</p>
+      <h3 className="text-3xl text-white">Seja muito bem-vindo {user.name}</h3>
+      <p className="text-xl text-white">Tempo acabou!</p>
+      <p className="text-xl text-white">Deslogue Agora!</p>
       <div className="h-12 mt-7">
         <button
           onClick={() => Logout()}

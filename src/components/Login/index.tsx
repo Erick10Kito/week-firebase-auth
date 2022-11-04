@@ -23,25 +23,9 @@ function LoginPage() {
   };
   return (
     <form className="flex flex-col items-center">
-      <h3 className="text-3xl text-white">
-        Faça o registro e boa tentativa {user.name} e {user.mail}
-      </h3>
+      <h3 className="text-3xl text-white">Faça o registro e boa tentativa</h3>
       <p className="text-xl text-white">mas ja aviso que não vai conseguir!</p>
       <div className=" mt-7">
-        <div className="flex flex-col pb-5 border-b-2 border-white border-dashed gap-[10px]">
-          <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="google@gmail.com"
-          />
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="****************"
-          />
-        </div>
         <div className="h-12">
           <button
             onClick={() => handleClickButtonLogin()}
