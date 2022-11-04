@@ -7,7 +7,7 @@ function AfterLogin() {
   return (
     <form className="flex flex-col items-center">
       <h3 className="text-3xl text-white">
-        Seja muito bem-vindo {user.name} e {user.mail}
+        Seja muito bem-vindo {user.name} do email {user.mail}
       </h3>
       <p className="text-xl text-white">
         Já aviso que temos um novo desafio para você!
