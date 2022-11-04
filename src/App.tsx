@@ -1,10 +1,15 @@
 import "../src/index.css";
 import { GoogleLogo } from "phosphor-react";
-import { auth, loginGoogle } from "./service/firebase";
-import { useContext, useEffect, useState } from "react";
+import { auth, loginGoogle, Logout } from "./service/firebase";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "./contexts/AuthContext";
 
 function App() {
+  // const Logout = () => {
+  //   sessionStorage.clear();
+  //   window.indexedDB.deleteDatabase("firebaseLocalStorageDb");
+  //   return document.location.reload();
+  // };
   const { user, setLogin } = useContext(AuthContext);
 
   useEffect(() => {
@@ -37,6 +42,21 @@ function App() {
                 mas ja aviso que não vai conseguir!
               </p>
               <div className="h-12 mt-7">
+                <div>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="google@gmail.com"
+                  />
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="****************"
+                  />
+                </div>
+
                 <button
                   onClick={() => handleClickButtonLogin()}
                   type="button"
@@ -61,7 +81,7 @@ function App() {
               </p>
               <div className="h-12 mt-7">
                 <button
-                  onClick={() => handleClickButtonLogin()}
+                  onClick={() => Logout()}
                   type="button"
                   className="duration-[.3s] text-white flex gap-[5px]
               items-center bg-red-600 p-2 rounded-[10px] hover:mt-[-5px]"

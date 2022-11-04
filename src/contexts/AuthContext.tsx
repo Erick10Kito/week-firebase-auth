@@ -1,4 +1,5 @@
-import { createContext, ReactElement, ReactNode, useState } from "react";
+import { createContext, ReactElement, useState } from "react";
+import { Logout } from "../service/firebase";
 
 interface IUser {
   id?: string;
@@ -29,9 +30,6 @@ const formatUserData = ({
   if (!displayName || !photoURL) {
     throw new Error("O usuario não tem Nome ou foto");
   }
-  /*if (email != "erickcamposbem69@gmail.com") {
-    alert("Saiiiii");
-  }*/
   return {
     id: uid,
     avatar: photoURL,
@@ -56,6 +54,10 @@ export default function AuthContextProvider(props: IUser) {
     photoURL,
     email,
   }: IUnformatedUserData) => {
+    /* if (email != "erickcamposbem69@gmail.com") {
+      alert("Sai daqui Kenga, só tem espaço para o meu nenem");
+      return;
+    }*/
     const formated = formatUserData({ uid, displayName, photoURL, email });
     setUser(formated);
   };
