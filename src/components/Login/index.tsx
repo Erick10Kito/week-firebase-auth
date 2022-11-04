@@ -27,8 +27,8 @@ function LoginPage() {
         Faça o registro e boa tentativa {user.name} e {user.mail}
       </h3>
       <p className="text-xl text-white">mas ja aviso que não vai conseguir!</p>
-      <div className="h-12 mt-7">
-        <div>
+      <div className=" mt-7">
+        <div className="flex flex-col pb-5 border-b-2 border-white border-dashed gap-[10px]">
           <input
             type="text"
             name="email"
@@ -42,16 +42,17 @@ function LoginPage() {
             placeholder="****************"
           />
         </div>
-
-        <button
-          onClick={() => handleClickButtonLogin()}
-          type="button"
-          className="duration-[.3s] text-white flex gap-[5px]
-              items-center bg-red-600 p-2 rounded-[10px] hover:mt-[-5px]"
-        >
-          <GoogleLogo size={32} weight="bold" />
-          Login Google
-        </button>
+        <div className="h-12">
+          <button
+            onClick={() => handleClickButtonLogin()}
+            type="button"
+            className="duration-[.3s] text-white flex gap-[5px] mt-5
+              items-center bg-red-600 p-2 rounded-[10px] hover:translate-y-[-5px]"
+          >
+            <GoogleLogo size={32} weight="bold" />
+            Login Google
+          </button>
+        </div>
       </div>
     </form>
   );
