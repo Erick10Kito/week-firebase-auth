@@ -20,7 +20,7 @@ function AfterLogin() {
           className="duration-[.3s] text-white flex gap-[5px]
   items-center bg-red-600 p-2 rounded-[10px] hover:mt-[-5px]"
         >
-          DESLOGAR DESSA POHA
+          DESLOGAR
         </button>
       </div>
     </form>
