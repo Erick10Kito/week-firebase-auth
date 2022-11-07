@@ -14,7 +14,7 @@ function Home() {
   return (
     <div className="h-screen flex justify-center items-center">
       <div className="bg-indigo-700 pt-20 pb-20 pl-20 pr-20 rounded-[50px]">
-        <div>{!user.name ? <LoginPage /> : <AfterLogin />}</div>
+        <div>{!user.id ? <LoginPage /> : <AfterLogin />}</div>
       </div>
     </div>
   );
